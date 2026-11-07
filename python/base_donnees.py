@@ -184,6 +184,7 @@ def lire_equipe():
       return equipe
 
 if __name__ == "__main__":
+      creer_table()
       print("**************************** gestion d'équipe ************************************")
 
 
