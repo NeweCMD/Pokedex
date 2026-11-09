@@ -24,16 +24,16 @@ def telecharger_catalogue(limite=20):
     '''telecharge dans la BDD tous les pokémons de l api et leurs differentes formes, à ne lancer que une fois au debut,
     le compteur ne marche pas si il y a deja des pokemon dans la BDD, 
     limite corresponds au nombre de pokemon que l'on veut telecharger avec leur differentes formes (1351), renvoie à la fin le nombre de pokemon telecharges et les potentielles erreurs'''
-    i=1
+    bd.creer_table()
+    bd.creer_table_equipe()
     nb_none= 0
     liste_nom=rapi.recup_liste_nom(limite)
-    for elt in liste_nom:
+    for pos,elt in enumerate(liste_nom,start=1):
         if bd.recherche_poke_nom(elt) == None:
-            print(i, " / ", limite, elt)
+            print(pos, " / ", limite, elt)
             poke = obtenir_pokemon(elt)
             if poke == None:
                 nb_none += 1
-            i +=1
             time.sleep(0.2)
     return (limite-nb_none," telecharges", nb_none," echecs")
             
