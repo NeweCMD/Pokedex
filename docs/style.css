@@ -1,0 +1,192 @@
+.ecran {
+    border: 5px solid black;
+    background-color: #3282F6;
+    padding: 10px;
+}
+
+body {
+    background-color: red;
+    padding: 20px;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "titre logo input"
+        ". . lien";
+    grid-gap: 10px;
+}
+header #titre {
+    grid-area: titre;
+    width: 50%;
+    size: 1em;
+}
+header img {
+    grid-area: logo;
+    width: 100px;
+    height: 100px;
+}
+header input {
+    grid-area: input;
+    font-size: 1.5em;
+    padding: 5px;
+    width: 95%;
+    background-color: lightblue;
+    border: 5px rgb(87, 213, 255) solid;
+}
+header a {
+    grid-area: lien;
+    font-size: 1.5em;
+    text-align: right;
+    color: yellow;
+    text-decoration: none;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-gap: 2px;
+    margin-top: 5px;
+    grid-template-areas:
+        "sprite_avant sprite_arriere nom ."
+        "sprite_avant sprite_arriere type t_p"
+        "sprite_avant cri statistiques statistiques"
+        "sprite_avant bouton statistiques statistiques";
+}
+
+main #sprite_avant {
+    border: 5px rgb(87, 213, 255) solid;
+    background-color: lightblue;
+    grid-area: sprite_avant;
+    width: 90%;
+    height: auto;
+}
+main #sprite_arriere {
+    border: 5px rgb(87, 213, 255) solid;
+    background-color: lightblue;
+    grid-area: sprite_arriere;
+    width: 50%;
+    height: auto;
+}
+main #cri {
+    border: 5px rgb(87, 213, 255) solid;
+    background-color: lightblue;
+    grid-area: cri;
+    width: 50%;
+    align-self: start;
+}
+main #nom {
+    border: 5px rgb(87, 213, 255) solid;
+    background-color: lightblue;
+    color : white;
+    grid-area: nom;
+    font-size: 2em;
+    font-weight: bold;
+    width: 75%;
+}
+main #types {
+    border: 5px rgb(87, 213, 255) solid;
+    background-color: lightblue;
+    color : white;
+    grid-area: type;
+    font-size: 1.5em;
+    width: 75%;
+}
+main #taille_poids {
+    border: 5px rgb(87, 213, 255) solid;
+    background-color: lightblue;
+    color : white;
+    grid-area: t_p;
+    font-size: 1.5em;
+    width: 75%;
+}
+main #statistiques {
+    border: 5px rgb(87, 213, 255) solid;
+    background-color: lightblue;
+    grid-area: statistiques;
+    font-size: 1.5em;
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+}
+
+#statistiques .statistique{
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        "nom_statistique rail_statistique valeur_statistique";
+    padding: 2px;
+}
+
+.statistique .statistique_nom {
+    grid-area: nom_statistique;
+    font-size: 1em;
+    text-align: right;
+    align-self: center;
+    padding : 5px;
+}
+
+.statistique .rail {
+    grid-area: rail_statistique;
+    background-color: gray;
+    height: 15px;
+    width: 100%;
+    border-radius:5px;
+    align-self: center;
+}
+
+.rail .remplissage {
+    --couleur_statistique: greenyellow;
+    background-color: var(--couleur_statistique) ;
+    height: 15px;
+    border-radius:5px;
+}
+
+.statistique .statistique_valeur {
+    grid-area: valeur_statistique;
+    font-size: 1em;
+    padding : 5px;
+    text-align: left;
+    align-self: center;
+}
+
+main #ajouter_equipe {
+    border: 5px rgb(87, 213, 255) solid;
+    background-color: lightblue;
+    grid-area: bouton;
+    font-size: 1.5em;
+    padding: 10px;
+    align-self: start;
+    color: white;
+    cursor: pointer;
+    width : 50%;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        ". logo lien";
+        grid-gap: 10px;
+}
+
+footer a {
+    grid-area: lien;
+    font-size: 1.5em;
+    text-decoration: none;
+    color: yellow;
+    background-color: #3282F6;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: right;
+}
+
+footer img {
+    grid-area: logo;
+    width: 100px;
+    height: 100px;
+}

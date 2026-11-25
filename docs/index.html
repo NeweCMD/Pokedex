@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pokédex</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+</head>
+<body>
+    <div class="ecran">
+
+        <header>
+            <img id="titre"src="./../assets/sprites/img_pokedex_titre.png" alt="logo pokedex">
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" alt="logo à mettre plus tard">
+            <input type="text" placeholder="rechercher pokémon" id="pokemon" list="suggestions" aria-label="rechercher pokémon">
+            <datalist id="suggestions"></datalist>
+            <a href="recherche_statistiques.html">rechercher pokémons par statistiques</a>
+        </header>
+
+        <main>
+                <img id="sprite_avant" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" alt="image du pokémon avant">
+                <img id="sprite_arriere" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/25.png" alt="image du pokémon arrière">
+                <audio id="cri" controls src="https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/25.ogg"></audio>
+                <h2 id="nom">nom du pokémon</h2>
+                <p id="types">types du pokémon : </p>
+
+                <div id="statistiques">
+                    <div class="statistique">
+                        <span class="statistique_nom">PV</span>
+                        <div class="rail">
+                            <div class="remplissage" style="width: 55%"></div>
+                        </div>
+                        <span class="statistique_valeur">55</span>
+                    </div>
+
+                    <div class="statistique">
+                        <span class="statistique_nom">attaque</span>
+                        <div class="rail">
+                            <div class="remplissage" style="width: 55%"></div>
+                        </div>
+                        <span class="statistique_valeur">55</span>
+                    </div>
+
+                    <div class="statistique">
+                        <span class="statistique_nom">défense</span>
+                        <div class="rail">
+                            <div class="remplissage" style="width: 40%"></div>
+                        </div>
+                        <span class="statistique_valeur">40</span>
+                    </div>
+
+                    <div class="statistique">
+                        <span class="statistique_nom">attaque spéciale</span>
+                        <div class="rail">
+                            <div class="remplissage" style="width: 50%"></div>
+                        </div>
+                        <span class="statistique_valeur">50</span>
+                    </div>
+
+                    <div class="statistique">
+                        <span class="statistique_nom">défense spéciale</span>
+                        <div class="rail">
+                            <div class="remplissage" style="width: 50%"></div>
+                        </div>
+                        <span class="statistique_valeur">50</span>
+                    </div>
+                    
+                    <div class="statistique">
+                        <span class="statistique_nom">vitesse</span>
+                        <div class="rail">
+                            <div class="remplissage" style="width: 90%"></div>
+                        </div>
+                        <span class="statistique_valeur">90</span>
+                    </div>
+                </div>
+
+                <div id="taille_poids">
+                    <p>taille : <span id="taille"></span></p>
+                    <p>poids : <span id="poids"></span></p>
+                </div>
+
+                <button id="ajouter_equipe" type="button">Ajouter à l'équipe</button>
+        </main>
+
+        <footer>
+            <a href="equipe.html">gestion d'équipe</a>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" alt="logo à mettre plus tard">
+        </footer>
+
+    </div>
+</body>
+</html>
